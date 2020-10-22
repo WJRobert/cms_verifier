@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ProductModel } from './product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  public product: ProductModel;
+  public typeIcon: string;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.determineTypeIcon();
+  }
+
+  private determineTypeIcon(): void {
+    this.typeIcon = 'menu_book';
   }
 
 }
