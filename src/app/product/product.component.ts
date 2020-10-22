@@ -20,7 +20,17 @@ export class ProductComponent implements OnInit {
   }
 
   private determineTypeIcon(): void {
-    this.typeIcon = 'menu_book';
+    switch (this.product.type) {
+      case 'Notebook':
+        this.typeIcon = 'laptop';
+        break;
+      case 'Cellphone':
+        this.typeIcon = 'smartphone';
+        break;
+      default:
+        this.typeIcon = 'menu_book';
+        break;
+    }
   }
 
 }
