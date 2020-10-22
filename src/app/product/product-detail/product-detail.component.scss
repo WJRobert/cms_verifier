@@ -1,0 +1,14 @@
+.product-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-card {
+    max-width: 70%;
+    mat-card-content {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+}

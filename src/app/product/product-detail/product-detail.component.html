@@ -1,0 +1,21 @@
+<div class="product-detail-container">
+  <mat-card *ngIf="product">
+    <mat-card-header>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle>R {{ product.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img src="{{ product.imageUrl }}" alt="{{ product.name }}">
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="accent" routerLink="/dashboard">
+        <span>BACK</span>
+      </button>
+      <button mat-raised-button color="primary">
+        <span>ADD TO CART</span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
