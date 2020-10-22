@@ -10,11 +10,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
